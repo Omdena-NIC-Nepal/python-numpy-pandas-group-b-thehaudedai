@@ -21,7 +21,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: "3.9"
 
       - name: Install Dependencies
         run: |
@@ -32,7 +32,7 @@ jobs:
         run: jupyter nbconvert --to script assignment.ipynb
 
       - name: Run Tests
-        run: pytest test_assignment.py
+        run: pytest assignment_test.py
 
       - name: Report Status
         if: ${{ failure() }}
